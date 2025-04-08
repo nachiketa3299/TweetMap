@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루스카이 검색</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>블루스카이 검색</h1>
+        <div class="search-container">
+            <div class="search-input-group">
+                <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+                <button id="searchButton">검색</button>
+            </div>
+            <div class="search-options">
+                <div class="option-group">
+                    <label for="resultCount">검색 결과 수</label>
+                    <input type="number" id="resultCount" min="1" max="100" value="100">
+                </div>
+                <div class="option-group">
+                    <label>좋아요 범위</label>
+                    <div class="range-inputs">
+                        <input type="number" id="minLikes" min="0" placeholder="최소">
+                        <span>~</span>
+                        <input type="number" id="maxLikes" min="0" placeholder="최대">
+                    </div>
+                </div>
+                <div class="option-group">
+                    <label>미디어 필터</label>
+                    <div class="checkbox-inputs">
+                        <label><input type="checkbox" id="requireImage"> 이미지 포함</label>
+                        <label><input type="checkbox" id="requireVideo"> 동영상 포함</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="js/bskyApi.js"></script>
+    <script src="js/uiComponents.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
